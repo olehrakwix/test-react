@@ -41,6 +41,7 @@
     ]
   },
   "devDependencies": {
-    "@types/debounce": "^1.2.1"
+    "@types/debounce": "^1.2.1",
+    "@wixc3/react-board": "^2.0.2"
   }
 }
