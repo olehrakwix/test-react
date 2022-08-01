@@ -1,9 +1,12 @@
 import React, { useState } from "react";
 import logo from "./logo.svg";
 import "./App.css";
+import debounce from "debounce";
 
 function App() {
   const [counter, setCounter] = useState(0);
+
+  const handleClick = debounce(() => setCounter(counter + 1), 3000);
 
   return (
     <div className="App">
@@ -12,7 +15,7 @@ function App() {
 
         <div>Counter: {counter}</div>
         <div>
-          <button onClick={() => setCounter(counter + 1)}>Click</button>
+          <button onClick={handleClick}>Click</button>
         </div>
       </header>
     </div>
